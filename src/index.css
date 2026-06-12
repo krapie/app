@@ -207,21 +207,14 @@ button { font: inherit; cursor: pointer; background: none; border: none; color: 
 .app-card:hover { background: var(--kp-hover-bg); }
 .app-card:active { background: var(--kp-press-bg); }
 
-.app-mono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px; height: 36px;
-  border-radius: var(--kp-radius-sm);
-  background: var(--kp-fg);
-  color: var(--kp-bg);
-  font-family: var(--kp-font-sans);
-  font-size: 12px;
-  font-weight: var(--kp-weight-semi);
-  letter-spacing: -0.01em;
+.ac-icon-wrap {
+  width: 44px; height: 44px;
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  margin-bottom: var(--kp-space-4);
+  margin-bottom: var(--kp-space-3);
 }
+.ac-icon { width: 24px; height: 24px; color: var(--kp-fg); display: block; }
 
 .app-body { flex: 1; }
 
