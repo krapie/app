@@ -105,7 +105,7 @@ export default function App() {
 
         <main className="kp-main">
           <div className="intro">
-            <h1>App.</h1>
+            <h1>App</h1>
             <p>Everything I've built and deployed.</p>
           </div>
           <div className="section-label">all</div>
