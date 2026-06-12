@@ -1,15 +1,13 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
 const APPS = [
-  { id: 'plumber',  glyph: '🔧', name: 'Plumber',  desc: 'Network toolbox — IP, DNS, BGP, TLS, CIDR',        domain: 'plumber.kevinprk.com'  },
-  { id: 'utility',  glyph: '🛠️', name: 'Utility',  desc: 'Dev toolbox — Hash, Base64, JSON, YAML, Regex',    domain: 'utility.kevinprk.com'  },
-  { id: 'paste',    glyph: '📋', name: 'Paste',    desc: 'Text sharing with configurable TTL up to 24h',      domain: 'paste.kevinprk.com'    },
-  { id: 'tiny',     glyph: '🔗', name: 'Tiny',     desc: 'URL shortener with QR code generation',             domain: 'tiny.kevinprk.com'     },
-  { id: 'note',     glyph: '📝', name: 'Note',     desc: 'Interactive technical notes — TCP, Clos, VPC',      domain: 'note.kevinprk.com'     },
-  { id: 'play',     glyph: '🎮', name: 'Play',     desc: 'Small interactive experiments',                     domain: 'play.kevinprk.com'     },
-  { id: 'karaoke',  glyph: '🎤', name: 'Karaoke',  desc: 'JPOP lyrics — Japanese, romaji, Korean side-by-side', domain: 'karaoke.kevinprk.com' },
-  { id: 'drive',    glyph: '📁', name: 'Drive',    desc: 'Self-hosted file browser',                          domain: 'drive.kevinprk.com'    },
-  { id: 'obsidian', glyph: '🧠', name: 'Obsidian', desc: 'Self-hosted Obsidian vault',                        domain: 'obsidian.kevinprk.com' },
+  { id: 'plumber', mono: 'Pb', name: 'Plumber', desc: 'Network toolbox — IP, DNS, BGP, TLS, CIDR',           domain: 'plumber.kevinprk.com' },
+  { id: 'utility', mono: 'Ut', name: 'Utility', desc: 'Dev toolbox — Hash, Base64, JSON, YAML, Regex',       domain: 'utility.kevinprk.com' },
+  { id: 'paste',   mono: 'Ps', name: 'Paste',   desc: 'Text sharing with configurable TTL up to 24h',        domain: 'paste.kevinprk.com'   },
+  { id: 'tiny',    mono: 'Ti', name: 'Tiny',    desc: 'URL shortener with QR code generation',                domain: 'tiny.kevinprk.com'    },
+  { id: 'note',    mono: 'N',  name: 'Note',    desc: 'Interactive technical notes — TCP, Clos, VPC',         domain: 'note.kevinprk.com'    },
+  { id: 'play',    mono: 'Pl', name: 'Play',    desc: 'Small interactive experiments',                        domain: 'play.kevinprk.com'    },
+  { id: 'karaoke', mono: 'Ka', name: 'Karaoke', desc: 'JPOP lyrics — Japanese, romaji, Korean side-by-side', domain: 'karaoke.kevinprk.com' },
 ]
 
 type Theme = 'light' | 'dark'
@@ -36,7 +34,7 @@ export default function App() {
           <div className="kp-header">
             <a href="https://kevinprk.com" className="brand">
               <span className="pi-mark">π</span>
-              app · kevinprk
+              App
             </a>
             <ThemeToggle />
           </div>
@@ -57,7 +55,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="app-card"
               >
-                <span className="app-glyph">{app.glyph}</span>
+                <span className="app-mono">{app.mono}</span>
                 <div className="app-body">
                   <div className="app-name">{app.name}</div>
                   <div className="app-desc">{app.desc}</div>

@@ -1,6 +1,6 @@
 {
-  "name": "app · kevinprk",
-  "short_name": "app",
+  "name": "App",
+  "short_name": "App",
   "icons": [
     { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
   ],

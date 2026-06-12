@@ -207,9 +207,19 @@ button { font: inherit; cursor: pointer; background: none; border: none; color: 
 .app-card:hover { background: var(--kp-hover-bg); }
 .app-card:active { background: var(--kp-press-bg); }
 
-.app-glyph {
-  font-size: 28px;
-  line-height: 1;
+.app-mono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--kp-radius-sm);
+  background: var(--kp-fg);
+  color: var(--kp-bg);
+  font-family: var(--kp-font-sans);
+  font-size: 12px;
+  font-weight: var(--kp-weight-semi);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
   margin-bottom: var(--kp-space-4);
 }
 
