@@ -1,0 +1,10 @@
+{
+  "name": "app · kevinprk",
+  "short_name": "app",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#0a0a0a",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
