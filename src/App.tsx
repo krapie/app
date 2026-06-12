@@ -73,6 +73,8 @@ type Theme = 'light' | 'dark'
 const ThemeCtx = createContext<{ theme: Theme; toggle: () => void }>({ theme: 'light', toggle: () => {} })
 
 export default function App() {
+  const embed = new URLSearchParams(window.location.search).get('embed') === '1'
+
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = localStorage.getItem('kp-theme')
     if (stored === 'light' || stored === 'dark') return stored
@@ -89,15 +91,17 @@ export default function App() {
   return (
     <ThemeCtx.Provider value={{ theme, toggle }}>
       <div className="page">
-        <header>
-          <div className="kp-header">
-            <a href="https://kevinprk.com" className="brand">
-              <span className="pi-mark">π</span>
-              App
-            </a>
-            <ThemeToggle />
-          </div>
-        </header>
+        {!embed && (
+          <header>
+            <div className="kp-header">
+              <a href="https://kevinprk.com" className="brand">
+                <span className="pi-mark">π</span>
+                App
+              </a>
+              <ThemeToggle />
+            </div>
+          </header>
+        )}
 
         <main className="kp-main">
           <div className="intro">
@@ -127,12 +131,14 @@ export default function App() {
           </div>
         </main>
 
-        <footer>
-          <div className="kp-footer">
-            <span>© {new Date().getFullYear()} kevin park</span>
-            <span className="pi">π</span>
-          </div>
-        </footer>
+        {!embed && (
+          <footer>
+            <div className="kp-footer">
+              <span>© {new Date().getFullYear()} kevin park</span>
+              <span className="pi">π</span>
+            </div>
+          </footer>
+        )}
       </div>
     </ThemeCtx.Provider>
   )
