@@ -59,6 +59,14 @@ function KaraokeIcon({ className }: IconProps) {
   )
 }
 
+function SpeedIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+    </svg>
+  )
+}
+
 const APPS: { id: string; Icon: (p: IconProps) => React.ReactElement; name: string; desc: string; domain: string }[] = [
   { id: 'plumber', Icon: PlumberIcon, name: 'Plumber', desc: 'Network toolbox — IP, DNS, BGP, TLS, CIDR',           domain: 'plumber.kevinprk.com' },
   { id: 'utility', Icon: UtilityIcon, name: 'Utility', desc: 'Dev toolbox — Hash, Base64, JSON, YAML, Regex',       domain: 'utility.kevinprk.com' },
@@ -67,6 +75,7 @@ const APPS: { id: string; Icon: (p: IconProps) => React.ReactElement; name: stri
   { id: 'note',    Icon: NoteIcon,    name: 'Note',    desc: 'Interactive technical notes — TCP, Clos, VPC',         domain: 'note.kevinprk.com'    },
   { id: 'play',    Icon: PlayIcon,    name: 'Play',    desc: 'Small interactive experiments',                        domain: 'play.kevinprk.com'    },
   { id: 'karaoke', Icon: KaraokeIcon, name: 'Karaoke', desc: 'JPOP lyrics — Japanese, romaji, Korean side-by-side', domain: 'karaoke.kevinprk.com' },
+  { id: 'speed',   Icon: SpeedIcon,   name: 'Speed',   desc: 'Internet speed test — download, upload, ping',          domain: 'speed.kevinprk.com'   },
 ]
 
 type Theme = 'light' | 'dark'
