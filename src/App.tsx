@@ -93,7 +93,7 @@ const APPS: { id: string; Icon: (p: IconProps) => React.ReactElement; name: stri
   { id: 'karaoke', Icon: KaraokeIcon, name: 'Karaoke', desc: 'JPOP lyrics — Japanese, romaji, Korean side-by-side', domain: 'karaoke.kevinprk.com' },
   { id: 'speed',   Icon: SpeedIcon,   name: 'Speed',   desc: 'Internet speed test — download, upload, ping',          domain: 'speed.kevinprk.com'   },
   { id: 'focus',   Icon: FocusIcon,   name: 'Focus',   desc: 'Pomodoro timer with configurable intervals',             domain: 'focus.kevinprk.com'   },
-  { id: 'task',    Icon: TaskIcon,    name: 'Task',    desc: 'Daily quest board — routine + bonus tasks, auto-reset',  domain: 'task.kevinprk.com'    },
+  { id: 'task',    Icon: TaskIcon,    name: 'Task',    desc: 'Daily task board — routine + bonus tasks, auto-reset',  domain: 'task.kevinprk.com'    },
 ]
 
 type Theme = 'light' | 'dark'
