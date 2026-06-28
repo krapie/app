@@ -75,6 +75,14 @@ function FocusIcon({ className }: IconProps) {
   )
 }
 
+function TaskIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+  )
+}
+
 const APPS: { id: string; Icon: (p: IconProps) => React.ReactElement; name: string; desc: string; domain: string }[] = [
   { id: 'plumber', Icon: PlumberIcon, name: 'Plumber', desc: 'Network toolbox — IP, DNS, BGP, TLS, CIDR',           domain: 'plumber.kevinprk.com' },
   { id: 'utility', Icon: UtilityIcon, name: 'Utility', desc: 'Dev toolbox — Hash, Base64, JSON, YAML, Regex',       domain: 'utility.kevinprk.com' },
@@ -85,6 +93,7 @@ const APPS: { id: string; Icon: (p: IconProps) => React.ReactElement; name: stri
   { id: 'karaoke', Icon: KaraokeIcon, name: 'Karaoke', desc: 'JPOP lyrics — Japanese, romaji, Korean side-by-side', domain: 'karaoke.kevinprk.com' },
   { id: 'speed',   Icon: SpeedIcon,   name: 'Speed',   desc: 'Internet speed test — download, upload, ping',          domain: 'speed.kevinprk.com'   },
   { id: 'focus',   Icon: FocusIcon,   name: 'Focus',   desc: 'Pomodoro timer with configurable intervals',             domain: 'focus.kevinprk.com'   },
+  { id: 'task',    Icon: TaskIcon,    name: 'Task',    desc: 'Daily quest board — routine + bonus tasks, auto-reset',  domain: 'task.kevinprk.com'    },
 ]
 
 type Theme = 'light' | 'dark'
