@@ -1,50 +1,20 @@
-# app
+# App
 
-App directory for [app.kevinprk.com](https://app.kevinprk.com) — everything Kevin Park has built and deployed.
+App directory — a single-page index of everything built and deployed on kevinprk.com. Quick links to all apps with a short description of each. **Live:** [app.kevinprk.com](https://app.kevinprk.com)
 
-## Apps
-
-| App | Description | URL |
-|-----|-------------|-----|
-| Plumber | Network toolbox — IP, DNS, BGP, TLS, CIDR | plumber.kevinprk.com |
-| Utility | Dev toolbox — Hash, Base64, JSON, YAML, Regex | utility.kevinprk.com |
-| Paste | Text sharing with configurable TTL up to 24h | paste.kevinprk.com |
-| Tiny | URL shortener with QR code generation | tiny.kevinprk.com |
-| Note | Interactive technical notes — TCP, Clos, VPC | note.kevinprk.com |
-| Play | Small interactive experiments | play.kevinprk.com |
-| Karaoke | JPOP lyrics — Japanese, romaji, Korean side-by-side | karaoke.kevinprk.com |
-
-## Stack
-
-| Layer | Tech |
-|-------|------|
-| Frontend | Vite + React + TypeScript |
-| Serving | nginx:1.27-alpine |
-
-## Project Structure
-
-```
-app/
-├── src/
-│   ├── App.tsx        # App grid + theme toggle
-│   ├── index.css
-│   └── main.tsx
-├── index.html
-├── Dockerfile
-└── nginx.conf
-```
-
-## Local Setup
+## Getting Started
 
 ```bash
 npm install
-npm run dev
+npm run dev   # http://localhost:5173
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+## Apps Listed
 
-## CI/CD
-
-Push to `main` → builds `krapi0314/app:<sha>` → updates `k8s/app/deployment.yaml` in homeserver repo → ArgoCD syncs.
-
-Required GitHub Actions secrets: `DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`, `GITOPS_TOKEN`.
+- **Plumber** — network toolbox: IP lookup, DNS, BGP, TLS certificates, CIDR calculator, epoch converter
+- **Utility** — dev toolbox: Hash, Base64, Regex tester, JSON prettifier, YAML ↔ JSON, String transformer, HAR analyzer
+- **Paste** — text sharing with configurable TTL up to 24 hours
+- **Tiny** — URL shortener with QR code generation and click analytics
+- **Note** — interactive technical notes covering TCP, Clos networking, and VPC design
+- **Play** — small interactive experiments: reaction time, AWS latency, network topologies, tracer, and more
+- **Karaoke** — JPOP lyrics reference with Japanese, phonetic, and Korean translation side by side
