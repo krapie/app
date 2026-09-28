@@ -65,8 +65,9 @@
   --kp-dur-fast: 120ms;
   --kp-ease: cubic-bezier(0.2, 0, 0, 1);
 
-  --kp-content-width: 920px;
-  --kp-page-pad: 48px;
+  --kp-content-width: 1280px;
+  --kp-prose-width: 680px;
+  --kp-page-pad: clamp(16px, 2.5vw, 32px);
 }
 
 @media (prefers-color-scheme: dark) {
