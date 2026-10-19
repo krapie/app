@@ -134,7 +134,7 @@ export default function App() {
         {!embed && (
           <header>
             <div className="kp-header">
-              <a href="https://kevinprk.com" className="brand">
+              <a href="/" className="brand">
                 <span className="pi-mark">π</span>
                 App
               </a>
